@@ -143,10 +143,12 @@
               
                   <img class="card-img-top" src="{{job.image.url}}"/>
                   <div class="d-flex justify-content-between">
-                    <a href="{% url 'detail' job.id %}" class="btn btn-primary btn-sm mt-1 text-center" >
+                    <a href="{% url 'detail' job.id %}" class="btn btn-primary btn-sm mt-1 text-centeralign-self-center " >
                     <p class="card-text"> {{ job.summary }} </p></a>
-                  
-                    <a href="{{ job.url }}" class="btn btn-secondary btn-sm mt-1 text-center">GitHub</a>
+                    {% if job.url %}
+                    <a href="{{ job.url }}" class="btn btn-secondary btn-sm mt-1 text-center align-self-center">GitHub</a>
+                    {% endif %}
+
                   </div>
                   </div>
                 </div>

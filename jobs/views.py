@@ -13,5 +13,7 @@ def detail(request,job_id):
 
 def external_URL():
     external_URL = Job.urls
-    return redirect(external_URL)
+    if external_URL:
+        return redirect(external_URL)
+    else: return ''
     
