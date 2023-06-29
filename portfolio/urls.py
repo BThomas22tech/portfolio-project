@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', jobs.views.homepage, name='index'),
     path('admin/', admin.site.urls),
-    path('jobs/<int:job_id>/', jobs.views.detail, name ='detail'),
+    path('jobs/<int:job_id>', jobs.views.detail, name ='detail'),
     path('redirect/', jobs.views.external_URL, name='redirect')
 ] 
 
